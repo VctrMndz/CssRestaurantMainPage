@@ -112,11 +112,11 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
 
 }
 
-.open fa-times{
+.open .fa-times{
     display: block;
 }
 
-.open fa-bars{
+.open .fa-bars{
     display: none;
 }
 
@@ -130,7 +130,209 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
 }
 
 
+.nav-item{
+    border-bottom: 2px solid rgba(255,255,255,.3);
+}
 
+.nav-link {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing:2px ;
+    margin-right: -2px;
+    transition: color .1s;
+}
+
+.nav-link:hover{
+    color: var(--scondary-font-color);
+}
+
+/*hero begin*/
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("/images/hero.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.sub-headline{
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--scondary-font-color);
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+}
+
+.first-letter{
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headline{
+    color:white;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -0.7rem;
+}
+
+.line{
+    width: 100%;
+    max-width: 8.3rem;
+    height: .25rem;
+    background-color: white;
+    position: relative;
+}
+
+.separator{
+ margin-left: 0.2rem;   
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.line-right::before,
+.line-left::before{
+    content:'';
+    position: absolute;
+    border: .6rem solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+.line-right::before{
+    border-right-color: white;
+    right: 0;
+}
+
+.line-left::before{
+    border-left-color: white;
+    left: 0;
+}
+
+.asterisk{
+    font-size: 1.2rem;  
+    color: var(--scondary-font-color);
+    margin:0 1.6rem;
+}
+
+.headline-description h5{
+    color:white;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.cta-btn{
+    font-size: 1.1rem;
+    background-color: white;
+    padding: .9rem 1.8rem;
+    color:var(--body-font-color);
+    border-radius: .4rem;
+    transition: background-color .5s ;
+
+}
+
+.cta-btn:hover,
+.cta-btn:focus{
+    color:white;
+    background-color: var(--scondary-font-color);
+
+}
+
+/*discover our story*/
+
+.global-headline{
+    text-align: center;
+    margin-top: 3.9rem;
+}
+
+.discover-our-story .global-headline {
+    margin-top: 6.9rem;
+}
+
+.global-headline .asterisk{
+    color: var(--body-font-color);
+    margin: 2.4rem 0 ;
+}
+
+.headline-dark{
+    color: var(--main-font-color-dark);
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.global-headline .sub-headline{
+    letter-spacing: -1px;
+    line-height: .42;
+}
+
+.restaurant-info{
+    text-align: center;
+}
+
+.restaurant-description{
+    margin-bottom: 3rem;
+}
+
+.restaurant-description p{
+    line-height: 1,6;
+    margin-bottom: 2.4;
+}
+
+.body-btn{
+    font-size: 1.5rem;
+    color: var(--scondary-font-color);
+    position: relative;
+    transition: color 5s;
+}
+
+.body-btn::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -3px;
+    background-color: var(--scondary-font-color);
+    width: 100%;
+    height: 2px;
+    transition: background-color .5s;
+}
+
+
+.body-btn:hover, 
+.body-btn:focus{
+    color: var(--main-font-color-dark); 
+    
+}
+
+.body-btn:hover::before, 
+.body-btn:focus::before{
+    background-color: var(--main-font-color-dark);
+}
+
+
+/* Tasteful recipes */
 
 
 
