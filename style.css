@@ -24,7 +24,13 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+
+}
+
 section{
+    overflow: hidden;
     padding: 3.9rem 0 ;
 }
 
@@ -168,6 +174,12 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
     font-weight: 100;
     line-height: .4;
     letter-spacing: 2px;
+
+    /* animation */
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .7s;
+
 }
 
 .first-letter{
@@ -183,7 +195,11 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
     font-weight: 900;
     letter-spacing: .5rem;
     margin-right: -0.7rem;
-}
+
+     /* animation  */
+     opacity: 0; 
+    animation: scale .5s forwards;
+ }
 
 .line{
     width: 100%;
@@ -191,6 +207,12 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
     height: .25rem;
     background-color: white;
     position: relative;
+
+    /* animation */
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: 1s;
+
 }
 
 .separator{
@@ -207,6 +229,10 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
     border: .6rem solid transparent;
     top: 50%;
     transform: translateY(-50%);
+    /* animation */
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1s;
     
 }
 
@@ -225,7 +251,19 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
     font-size: 1.2rem;  
     color: var(--scondary-font-color);
     margin:0 1.6rem;
+
+    opacity: 0;
+    animation: spin 1s forwards;
+    animation-delay: .7s;
+
 }
+
+.single-animation{
+    opacity: 0;
+    animation:fadeDown .5s forwards;
+    animation-delay: 1s;
+}
+
 
 .headline-description h5{
     color:white;
@@ -388,8 +426,7 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
-
-    
+  
 }
 
 .back-to-top i {
@@ -397,10 +434,14 @@ footer{
     color: white;
     font-size: 2rem;
     padding:2rem;
+
+    animation: up 1.5s infinite;
+
+
 }
 
 .footer-content{
-    /* overflow: hidden; */
+     overflow: hidden; 
 }
 
 .footer-content h4{
@@ -418,7 +459,7 @@ footer{
 
 .footer-content-about{
     margin-bottom: 3.4rem ;
-    margin-top: -3.9rem;
+    margin-top: -2.9rem;
 }
 
 .footer-content-about p{
@@ -473,3 +514,192 @@ footer{
 
 /* medias */
 
+@media screen and (min-width: 900px){
+    
+    section{
+        padding: 7.9rem;
+    }
+
+    .menu-toggle{
+        display: none;
+
+    }
+
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+
+    }
+
+    .nav-item{
+        margin: 0 2.4rem;
+        border:none;
+    }
+
+    .nav-item:last-child{
+        margin-right: 0;
+    }
+
+
+    .nav-link{
+        font-size: 1.3rem;
+    }
+
+    .active{
+        position: relative;
+
+    }
+
+    .active::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px;
+    }
+
+    .sub-headline{
+        font-size: 10rem;
+    }
+
+    .first-letter{
+        font-size: 12.2rem;
+    }
+
+    .headline{
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
+    }
+    .line{
+        max-width: 11.4rem;
+    }
+
+    .restaurant-info{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .restaurant-info>div{
+        flex: 1;
+    }
+
+    .padding-right{
+        padding-right: 7rem;
+    }
+
+    footer{
+        padding-bottom:0 ;
+    }
+
+    .footer-content{
+        max-width: 78rem;
+        margin: auto;
+    }
+    
+    .footer-content-about{
+        max-width: 51.3rem;
+        margin: 0 auto 5.4rem;
+    }
+
+    .footer-content-divider{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .social-media, 
+    .newsletter-form{
+        width: 100%;
+        max-width: 27rem;
+        margin: 0 1rem;    
+    }
+
+    .social-icons i{
+        opacity: 1;
+    }
+
+    .newsletter-btn{
+        margin-left:8rem;
+    }
+
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes scale{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+      }
+}
+
+@keyframes grow{
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+      }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}
